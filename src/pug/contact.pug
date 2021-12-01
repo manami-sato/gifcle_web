@@ -1,0 +1,67 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/contact.css")
+		title お問い合わせ｜Gifcle
+	body
+		include _sub_nav.pug
+		main
+			h2
+				span お問い合わせ
+			p.contact__description
+				|頂きましたご意見・ご感想は社員一同真摯に受け止め、今後のサービス向上に努めて参ります。<br>
+				|お問い合わせには一週間以内に返信いたしますが、記載されている内容により返信を控えさせていただく場合がございます。
+			div.contact__wrap
+				div.contact__flow
+					div.contact__flow--selected
+						div STEP
+						div 1
+						div お問い合わせ
+					div
+						div STEP
+						div 2
+						div 確認
+					div
+						div STEP
+						div 3
+						div 送信
+				div.contact__form
+					form
+						table
+							tr
+								th 法人・個人
+									span.contact__form--attention *
+								td
+									input(type="radio",name="",value="corporation").contact__form--radio
+									|法人
+									input(type="radio",name="",value="individual").contact__form--radio
+									|個人
+							tr
+								th お名前
+									span.contact__form--attention *
+								td
+									input(type="text",name="").contact__form--value
+							tr
+								th 会社・部署名
+								td
+									input(type="text",name="").contact__form--value
+							tr
+								th メールアドレス
+									span.contact__form--attention *
+								td
+									input(type="text",name="").contact__form--value
+							tr.contact__form--textarea
+								th
+									span お問い合わせ内容
+									span.contact__form--attention *
+								td
+									textarea(name="", cols="30", rows="10").contact__form--value
+							tr.contact__form--txt
+								td(colspan="2") *は必須項目です。
+							tr
+								td(colspan="2")
+									button(type="submit").contact__form--btn 確認
+		include _sub_foot.pug 
+		include _foot.pug
+		script(src="js/common.js")

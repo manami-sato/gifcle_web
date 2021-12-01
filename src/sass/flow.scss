@@ -1,0 +1,49 @@
+@import "ress";
+@import "ver";
+@import "common";
+@import "sub";
+
+dl{
+	width: 80vw;
+	max-width: 1000px;
+	margin: 0 auto;
+	dt{
+		display: flex;
+		height: 50px;
+		background: $pink;
+		border-radius: 25px;
+		width: 60%;
+		font-size: 1.8rem;
+		color: $white;
+		font-weight: bold;
+		display: flex;
+		align-items: center;
+		padding-left: 60px;
+		position: relative;
+	}
+	dd{
+		width: 90%;
+		border-radius: 30px;
+		padding: 35px 45px;
+		background: $white;
+		margin: 25px auto 50px;
+		line-height: 3rem;
+	}
+}
+.flow__num{
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	margin:auto;
+	left: -30px;
+	width: 70px;
+	height: 70px;
+	border: 10px $yellow solid;
+	color: $yellow;
+	background: $white;
+	border-radius: 50%;
+	font-size: 3rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

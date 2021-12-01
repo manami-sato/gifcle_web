@@ -1,0 +1,76 @@
+$yellow:#FFCE00;
+$orange:#FF9D00;
+$pink:#FF8B8B;
+$blue:#0B799A;
+$black:#707070;
+$gray:rgb(184, 184, 184);
+$white:#fff;
+// 色
+
+$yellowToOrange:linear-gradient(90deg, $yellow, $orange);
+
+@mixin ttlSet($size:12rem,$top:-50px){
+	font-family: adobe-handwriting-ernie, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: $size;
+	color: #a0a0a0c5;
+	position: absolute;
+	top: $top;
+	left: 0;
+	z-index: -10;
+}
+
+@mixin btnSet($bgC:$yellowToOrange,$c:$white,$w:180px,$h:45px,$bgI:url("../img/btn_triangle.svg"),$a:15px){
+	background: $bgC;
+	color: $c;
+	height: $h;
+	border-radius: 35px;
+	width: $w;
+	font-size: 1.4rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+	box-shadow: 0 0 20px rgba(102, 102, 102, 0.2);
+	opacity: 1;
+	transition: 0.2s opacity;
+	&:hover{
+		opacity: 0.7;
+	}
+	&::after{
+		content: "";
+		display: block;
+		background: $bgI;
+		background-repeat: no-repeat;
+		background-size: contain;
+		width:$a;
+		height:$a;
+		margin-left: 20px;
+	}
+}
+
+@mixin arrowSet($bg:$black,$w:10px,$h:4px){
+	&::before,
+	&::after{
+		content: "";
+		display: block;
+		background: $bg;
+		width: $w;
+		height: $h;
+		border-radius: 5px;
+		position: absolute;
+		top: 0;
+		bottom:0;
+		margin:auto;
+		transition: 0.2s top, 0.2s bottom;
+	}
+	&::before{
+		transform: rotateZ(45deg);
+		right: -15px;
+	}
+	&::after{
+		transform: rotateZ(135deg);
+		right: -20px;
+	}
+}

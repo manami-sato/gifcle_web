@@ -1,0 +1,190 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/index.css")
+		title Gifcle｜#きもちを贈り合うサブスクリプション
+	body
+		header
+			nav
+				ul
+					li.nav__link--logo
+						h1
+							a(href="#")
+								img(src="img/logo.svg", alt="Gifcle")
+					li.nav__link
+						a(href="#system") SYSTEM
+					li.nav__link
+						a(href="#faq") FAQ
+					li.nav__link
+						a(href="contact.html",target="page") CONTACT
+				a(href="#").nav__link--app アプリをダウンロード
+		main
+			div.index__1stView
+				p.index__1stView--txt
+					|ちょっとギフトな<br>
+					|毎日を。
+				p.index__1stView--subTxt
+					span #きもちを贈り合うサブスクリプション
+					span Gifcle			
+				div.index__1stView--appImg
+					a(href="#")
+						img(src="img/app.png",alt="アプリダウンロード")
+			div.index__about
+				div
+					div.index__about--logo
+						img(src="img/about_concept.png", alt="#")
+					div.index__about--txt
+						span 誰かからふとした時に届く「お祝い」「励まし」「寄り添い」…<br>
+							|相手が誰かはわからなくても、<br>
+							|そのギフトはすこしのハッピーと贅沢を<br>
+							|感じられるのではないでしょうか？
+						span わたしからあなたへ、あなたからわたしへ。<br>
+							|そんな些細な「ありがとう」の循環を目指します。
+						span
+							span #きもちを贈り合うサブスクリプション
+							|Gifcleが提供するのは、<br>
+							|あたらしいギフトのサイクルです。
+			section.index__system#system
+				h2.index__ttl
+					span Gifcleのサイクル
+				div.index__system--img
+					img(src="img/system.png",alt="Gifcleのサイクル")
+					a(href="flow.html",target="page").index__system--link 詳しく見る
+			section.index__list
+				h2 “きもちのカテゴリー”とは？
+				div.index__list--icon
+					div
+						img(src="img/category_1_1.svg",alt="お祝い")
+						p ex）誕生日、記念日
+					div
+						img(src="img/category_1_2.svg",alt="励まし")
+						p ex）試験、面接
+					div
+						img(src="img/category_1_3.svg",alt="寄り添い")
+						p ex）生理、低気圧
+				p.index__list--txt
+					|テキストテキストテキストテキスト<br>
+					|テキストテキストテキスト
+				div.index__list--flow
+					div
+						div.category__flow--headline イベント登録時
+						figure.category__flow--img
+							img(src="img/category_2_1.svg",alt="イベント登録時")
+						p.category__flow--description
+							|登録したイベントの<br>
+							|“きもちのカテゴリー”を設定
+					div
+						div.category__flow--headline 贈る相手を探す時
+						figure.category__flow--img
+							img(src="img/category_2_2.svg",alt="贈る相手を探す時")
+						p.category__flow--description
+							|どんな想いを込めたギフトを贈りたいか<br>
+							|きもちのカテゴリーから選択
+			div.index__tips
+				div.index__tips--bg
+				div.index__tips--headline Gifcleを活用して
+				section.index__tips--wrap
+					h2.index__tips--ttl
+						|50種類以上のお店で<br>
+						|おトクにお買い物を楽しもう！
+					div.test__description
+						img(src="img/description.svg", alt="")
+					//- dl
+						dt
+							|届いたギフトを<br>
+							|クーポンに交換！
+						dd
+							|テキストテキストテキスト<br>
+							|テキストテキストテキスト
+					//- dl
+						dt
+							|普段のお買い物でも<br>
+							|ポイント*が貯まる！
+						dd
+							|テキストテキストテキスト<br>
+							|テキストテキストテキスト
+					//- p *Gifcleポイント
+				section.index__tips--wrap
+					h2.index__tips--ttl 会員は継続すると特典アップ！
+					p 会員の期間に応じてランクアップ！Gifcleをもっとおトクに使おう！
+					table
+						tbody
+							tr
+								th 会員継続
+								td
+									span 会員登録時<br>
+									|I
+								td
+									span 3ヶ月〜<br>
+									|II
+								td
+									span 6ヶ月〜<br>
+									|III
+								td
+									span 9ヶ月〜<br>
+									|IV
+								td
+									span 12ヶ月〜<br>
+									|V
+							tr
+								th クーポン割引率
+								td 0円
+								td 50円
+								td 100円
+								td 150円
+								td 200円
+							tr
+								th ポイント還元率
+								td 3%
+								td 5%
+								td 7%
+								td 7%
+								td 10%
+			section.index__faq#faq
+				h2.index__ttl
+					span FAQ
+				div
+					div
+						div.index__faq--question Gifcleはどんなお店と提携していますか？
+						div.index__faq--answer
+							|Gifcleは50種類以上の店舗様と提携しております。詳細は
+							a(href="shops.html",target="page") こちら
+							|をご参照ください。
+						div.index__faq--question 「きもちのカテゴリー」とはなんですか？
+						div.index__faq--answer
+							|予定を登録する時、並びにギフトの送信先を探す際感情をカテゴライズすることができます。<br>
+							|詳細は
+							a(href="#") こちら
+							|をご参照ください。
+					div.index__faq--link
+						a(href="faq.html",target="page") 詳しく見る
+						a(href="contact.html",target="page") お問い合わせ
+			footer
+				div.index__footer
+					section
+						h2 今すぐアプリをダウンロード！
+						a(href="#").index__footer--app
+							img(src="img/app.png",alt="アプリダウンロード")
+						div.index__footer--link
+							a(href="#") プライバシーポリシー
+							a(href="faq.html",target="page") よくある質問
+							a(href="contact.html",target="page") お問い合わせ
+					div.index__footer--shere
+						p.index__footer--txt shere with
+						ul
+							li
+								a(href="#")
+									img(src="img/shere_li.svg",alt="LINEで共有")
+							li
+								a(href="https://twitter.com/intent/tweet?url=http://click.ecc.ac.jp/ecc/msatou/Gifcle/&text=#%E3%81%8D%E3%82%82%E3%81%A1%E3%82%92%E8%B4%88%E3%82%8A%E5%90%88%E3%81%86%E3%82%B5%E3%83%96%E3%82%B9%E3%82%AF%E3%83%AA%E3%83%97%E3%82%B7%E3%83%A7%E3%83%B3%20Gifcle%E3%81%8C%E6%8F%90%E4%BE%9B%E3%81%99%E3%82%8B%E3%81%AE%E3%81%AF%E3%80%81%E2%80%9C%E3%81%82%E3%81%9F%E3%82%89%E3%81%97%E3%81%84%E3%82%AE%E3%83%95%E3%83%88%E3%81%AE%E3%82%B5%E3%82%A4%E3%82%AF%E3%83%AB%E2%80%9D%E3%81%A7%E3%81%99%E3%80%82" target="_blank")
+									img(src="img/shere_tw.svg",alt="Twitterで共有")
+							li
+								a(href="https://www.facebook.com/sharer/sharer.php?u=http://click.ecc.ac.jp/ecc/msatou/Gifcle/" target="_blank")
+									img(src="img/shere_fb.svg",alt="Facebookで共有")
+						small &copy; 2021 Gifcle Inc.
+			a(href="#").index__scrollTop
+				img(src="img/web_top.svg",alt="トップに戻る") 
+		include _foot.pug
+		script(type="text/javascript",src="//typesquare.com/3/tsst/script/ja/typesquare.js?609c02c5ecd44d0d801e149ae90393a3",charset="utf-8")
+		script(src="js/index.js")

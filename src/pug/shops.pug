@@ -1,0 +1,63 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/shops.css")
+		title 提携店舗一覧｜Gifcle
+	body
+		include _sub_nav.pug
+		main
+			h2
+				span 提携店舗一覧
+			div.shops__wrap
+				ul.shops__category
+					li
+						a(href="#snack") 軽食
+					li
+						a(href="#convenienceStore") コンビニ
+					li
+						a(href="#restaurant") レストラン・居酒屋
+					li
+						a(href="#other") その他
+				dl.shops__list#snack
+					dt.shops__list--headline 軽食
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+				dl.shops__list#convenienceStore
+					dt.shops__list--headline コンビニ
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+				dl.shops__list#restaurant
+					dt.shops__list--headline レストラン・居酒屋
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+				dl.shops__list#other
+					dt.shops__list--headline その他
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+					dd.shops__list--name テキストテキスト
+		include _sub_foot.pug
+		include _foot.pug

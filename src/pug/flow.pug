@@ -1,0 +1,39 @@
+doctype html
+html(lang="ja")
+	head
+		include _head.pug
+		link(rel="stylesheet", href="css/flow.css")
+		title Gifcleについて｜Gifcle
+	body
+		include _sub_nav.pug
+		main
+			h2
+				span Gifcleについて
+		dl
+			dt
+				div.flow__num 1
+				div カレンダーにイベントを登録
+			dd
+				|登録した誕生日+結婚記念日、テスト、面接、大会など。
+				|そのイベントの「きもちのカテゴリー」を設定する。
+			dt
+				div.flow__num 2
+				div イベント付近でギフトが届く
+			dd
+				|イベント付近になると、他のユーザーのギフト送信先として
+				|自動的にピックアップされる。回数は多くて3件ほど
+			dt
+				div.flow__num 3
+				div 別の人にギフトを送信する
+			dd
+				|「きもちのカテゴリー」から今ギフトを贈りたい感情を選択。カテゴリーが合致したイベント付近のユーザーが一人ピックアップされる。
+				|定価より100〜から200円ほど安い金額で、受け取ったものと同額分のギフトを送信。
+				|※届いたものの不要であれば断れる。自動的に別の候補に送られる。
+			dt
+				div.flow__num 4
+				div ギフトを受け取る
+			dd
+				|送信してギフトをゲット！ギフトをくれた人に任意でメッセージを送れる。
+				|自分の送ったギフトが受け取られると、「ギフトが受け取ってもらえました！」と通知が来る。メッセージも添付されているとここにその旨の文章が追加。
+		include _sub_foot.pug
+		include _foot.pug
