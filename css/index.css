@@ -1,0 +1,1384 @@
+@charset "UTF-8";
+/*!
+ * ress.css • v1.1.2
+ * MIT License
+ * github.com/filipelinhares/ress
+ */
+/* # =================================================================
+   # Global selectors
+   # ================================================================= */
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
+  /* All browsers without overlaying scrollbars */
+  -webkit-text-size-adjust: 100%;
+  /* iOS 8+ */
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+::before,
+::after {
+  text-decoration: inherit;
+  /* Inherit text-decoration and vertical align to ::before and ::after pseudo elements */
+  vertical-align: inherit;
+}
+
+/* Remove margin, padding of all elements and set background-no-repeat as default */
+* {
+  background-repeat: no-repeat;
+  /* Set `background-repeat: no-repeat` to all elements */
+  padding: 0;
+  /* Reset `padding` and `margin` of all elements */
+  margin: 0;
+}
+
+/* # =================================================================
+   # General elements
+   # ================================================================= */
+/* Add the correct display in iOS 4-7.*/
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+hr {
+  overflow: visible;
+  /* Show the overflow in Edge and IE */
+}
+
+/*
+* Correct `block` display not defined for any HTML5 element in IE 8/9
+* Correct `block` display not defined for `details` or `summary` in IE 10/11
+* and Firefox
+* Correct `block` display not defined for `main` in IE 11
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+summary {
+  display: list-item;
+  /* Add the correct display in all browsers */
+}
+
+small {
+  font-size: 80%;
+  /* Set font-size to 80% in `small` elements */
+}
+
+[hidden],
+template {
+  display: none;
+  /* Add the correct display in IE */
+}
+
+abbr[title] {
+  border-bottom: 1px dotted;
+  /* Add a bordered underline effect in all browsers */
+  text-decoration: none;
+  /* Remove text decoration in Firefox 40+ */
+}
+
+a {
+  background-color: transparent;
+  /* Remove the gray background on active links in IE 10 */
+  -webkit-text-decoration-skip: objects;
+  /* Remove gaps in links underline in iOS 8+ and Safari 8+ */
+}
+
+a:active,
+a:hover {
+  outline-width: 0;
+  /* Remove the outline when hovering in all browsers */
+}
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  /* Specify the font family of code elements */
+}
+
+b,
+strong {
+  font-weight: bolder;
+  /* Correct style set to `bold` in Edge 12+, Safari 6.2+, and Chrome 18+ */
+}
+
+dfn {
+  font-style: italic;
+  /* Address styling not present in Safari and Chrome */
+}
+
+/* Address styling not present in IE 8/9 */
+mark {
+  background-color: #ff0;
+  color: #000;
+}
+
+/* https://gist.github.com/unruthless/413930 */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* # =================================================================
+   # Forms
+   # ================================================================= */
+input {
+  border-radius: 0;
+}
+
+/* Apply cursor pointer to button elements */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"],
+[role="button"] {
+  cursor: pointer;
+}
+
+/* Replace pointer cursor in disabled elements */
+[disabled] {
+  cursor: default;
+}
+
+[type="number"] {
+  width: auto;
+  /* Firefox 36+ */
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Safari 8+ */
+}
+
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+  /* Safari 8 */
+}
+
+textarea {
+  overflow: auto;
+  /* Internet Explorer 11+ */
+  resize: vertical;
+  /* Specify textarea resizability */
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font: inherit;
+  /* Specify font inheritance of form elements */
+}
+
+optgroup {
+  font-weight: bold;
+  /* Restore the font weight unset by the previous rule. */
+}
+
+button {
+  overflow: visible;
+  /* Address `overflow` set to `hidden` in IE 8/9/10/11 */
+}
+
+/* Remove inner padding and border in Firefox 4+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: 0;
+  padding: 0;
+}
+
+/* Replace focus style removed in the border reset above */
+button:-moz-focusring,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  outline: 1px dotted ButtonText;
+}
+
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS */
+}
+
+button,
+select {
+  text-transform: none;
+  /* Firefox 40+, Internet Explorer 11- */
+}
+
+/* Remove the default button styling in all browsers */
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  border-style: none;
+  color: inherit;
+}
+
+/* Style select like a standard input */
+select {
+  -moz-appearance: none;
+  /* Firefox 36+ */
+  -webkit-appearance: none;
+  /* Chrome 41+ */
+}
+
+select::-ms-expand {
+  display: none;
+  /* Internet Explorer 11+ */
+}
+
+select::-ms-value {
+  color: currentColor;
+  /* Internet Explorer 11+ */
+}
+
+legend {
+  border: 0;
+  /* Correct `color` not being inherited in IE 8/9/10/11 */
+  color: inherit;
+  /* Correct the color inheritance from `fieldset` elements in IE */
+  display: table;
+  /* Correct the text wrapping in Edge and IE */
+  max-width: 100%;
+  /* Correct the text wrapping in Edge and IE */
+  white-space: normal;
+  /* Correct the text wrapping in Edge and IE */
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* Correct the inability to style clickable types in iOS and Safari */
+  font: inherit;
+  /* Change font properties to `inherit` in Chrome and Safari */
+}
+
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* Correct the odd appearance in Chrome and Safari */
+  outline-offset: -2px;
+  /* Correct the outline style in Safari */
+}
+
+/* # =================================================================
+   # Specify media element style
+   # ================================================================= */
+img {
+  border-style: none;
+  /* Remove border when inside `a` element in IE 8/9/10 */
+}
+
+/* Add the correct vertical alignment in Chrome, Firefox, and Opera */
+progress {
+  vertical-align: baseline;
+}
+
+svg:not(:root) {
+  overflow: hidden;
+  /* Internet Explorer 11- */
+}
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* Internet Explorer 11+, Windows Phone 8.1+ */
+}
+
+/* # =================================================================
+   # Accessibility
+   # ================================================================= */
+/* Hide content from screens but not screenreaders */
+@media screen {
+  [hidden~="screen"] {
+    display: inherit;
+  }
+  [hidden~="screen"]:not(:active):not(:focus):not(:target) {
+    position: absolute !important;
+    clip: rect(0 0 0 0) !important;
+  }
+}
+
+/* Specify the progress cursor of updating elements */
+[aria-busy="true"] {
+  cursor: progress;
+}
+
+/* Specify the pointer cursor of trigger elements */
+[aria-controls] {
+  cursor: pointer;
+}
+
+/* Specify the unstyled cursor of disabled, not-editable, or otherwise inoperable elements */
+[aria-disabled] {
+  cursor: default;
+}
+
+/* # =================================================================
+   # Selection
+   # ================================================================= */
+/* Specify text selection background color and omit drop shadow */
+::-moz-selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+::selection {
+  background-color: #b3d4fc;
+  /* Required when declaring ::selection */
+  color: #000;
+  text-shadow: none;
+}
+
+/* -------------------------------
+▼全体設定ここから▼
+------------------------------- */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: #707070;
+  font-size: 1.4rem;
+}
+
+a {
+  color: #707070;
+  text-decoration: none;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+::-moz-selection {
+  background: rgba(255, 206, 0, 0.5);
+  color: #042e3b;
+}
+
+::selection {
+  background: rgba(255, 206, 0, 0.5);
+  color: #042e3b;
+}
+
+::-moz-selection {
+  /* Firefox */
+  background: rgba(255, 206, 0, 0.5);
+  color: #042e3b;
+}
+
+/* -------------------------------
+▲全体設定ここまで▲
+------------------------------- */
+.nav__link--logo {
+  font-size: 2rem;
+  margin-right: 30px;
+}
+
+.nav__link--logo a {
+  display: flex;
+  align-items: center;
+  height: 80%;
+  width: 130px;
+}
+
+.nav__link--logo a img {
+  height: 100%;
+}
+
+/* -------------------------------
+▼index全体設定ここから▼
+------------------------------- */
+.index__ttl {
+  position: relative;
+  color: #fff;
+  height: 200px;
+  margin-left: 5vw;
+}
+
+.index__ttl span {
+  display: inline-block;
+  position: absolute;
+  bottom: 50px;
+  left: 200px;
+  font-size: 2.5rem;
+}
+
+.index__ttl::after {
+  content: "";
+  display: block;
+  width: 420px;
+  height: 200px;
+  background: url("../img/title_bg.svg") no-repeat;
+  background-size: contain;
+  position: absolute;
+  left: 30px;
+  top: 60px;
+  z-index: -5;
+}
+
+.index__add {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.index__add--1 {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.index__add--2 {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+/* -------------------------------
+▲index全体設定ここまで▲
+------------------------------- */
+/* -------------------------------
+▼navここから▼
+------------------------------- */
+header {
+  width: 100vw;
+  height: 80px;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  font-family: "Comfortaa", sans-serif;
+  letter-spacing: 0.2rem;
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 0 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav .nav__link {
+  position: relative;
+  padding: 0 30px;
+  transition: 0.2s opacity;
+  opacity: 1;
+}
+
+nav .nav__link:hover {
+  opacity: 0.6;
+}
+
+nav .nav__link:hover::after {
+  background: #FF9D00;
+}
+
+nav .nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  display: block;
+  background: #FFCE00;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  transition: 0.2s background;
+}
+
+nav .nav__link--app {
+  background: linear-gradient(90deg, #FFCE00, #FF9D00);
+  color: #fff;
+  height: 50px;
+  border-radius: 35px;
+  width: 270px;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(102, 102, 102, 0.2);
+  opacity: 1;
+  transition: 0.2s opacity;
+  font-size: 1.5rem;
+}
+
+nav .nav__link--app:hover {
+  opacity: 0.7;
+}
+
+nav .nav__link--app::after {
+  content: "";
+  display: block;
+  background: url("../img/btn_triangle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  margin-left: 20px;
+}
+
+/* -------------------------------
+▲navここまで▲
+------------------------------- */
+/* -------------------------------
+▼index__1stViewここから▼
+------------------------------- */
+.index__1stView {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/main.png");
+  background-size: cover, cover;
+  background-position: auto, top center left center;
+  color: #fff;
+  font-weight: bold;
+}
+
+.index__1stView--txt {
+  font-size: 6rem;
+  line-height: 7.5rem;
+  text-align: right;
+  margin: 80px 10vw 3vh 0;
+}
+
+.index__1stView--subTxt {
+  font-size: 2.5rem;
+  margin: 0 10vw 7vh 0;
+}
+
+.index__1stView--subTxt span:first-child {
+  font-weight: normal;
+  font-size: 2.2rem;
+}
+
+.index__1stView--subTxt span:first-child::after {
+  content: "-";
+  margin: 0 10px;
+}
+
+.index__1stView--appImg {
+  margin: 0 10vw 0 0;
+  height: 60px;
+}
+
+.index__1stView--appImg a img {
+  height: 100%;
+}
+
+/* -------------------------------
+▲index__1stViewここまで▲
+------------------------------- */
+/* -------------------------------
+▼index__aboutここから▼
+------------------------------- */
+.index__about {
+  width: 100vw;
+  min-height: 100vh;
+  background: url("../img/about_bg_mockup.png"), url("../img/about_bg_blob.svg");
+  background-repeat: no-repeat, no-repeat;
+  background-position: top 0 right 0, bottom 0 left -50px;
+  background-size: auto 100vh, 500px auto;
+  display: flex;
+  align-items: flex-end;
+}
+
+.index__about > div {
+  width: 30%;
+  min-width: 430px;
+  margin: auto 0 50px 13%;
+}
+
+.index__about > div img {
+  width: 90%;
+}
+
+.index__about--txt > span {
+  display: block;
+  background: rgba(255, 255, 255, 0.8);
+  line-height: 2.3rem;
+  opacity: 1;
+  padding: 10px 5px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.index__about--txt > span span {
+  color: #FF8B8B;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+/* -------------------------------
+▲index__aboutここまで▲
+------------------------------- */
+/* -------------------------------
+▼index__systemここから▼
+------------------------------- */
+.index__system {
+  position: relative;
+  padding: 200px 0 0;
+  background-image: url("../img/figure_balloon_1.png"), url("../img/figure_balloon_2.png");
+  background-size: 270px auto, 150px auto;
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 10% top 10%, left 10% bottom 10%;
+}
+
+.index__system .index__ttl {
+  width: 500px;
+  position: absolute;
+  top: 70px;
+  left: 0;
+}
+
+.index__system .index__ttl::before {
+  content: "System";
+  font-family: adobe-handwriting-ernie, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 12rem;
+  color: #a0a0a0c5;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  z-index: -10;
+}
+
+.index__system--img {
+  width: 70vw;
+  height: 95vh;
+  min-height: 800px;
+  min-width: 600px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.index__system--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.index__system--img .index__system--link {
+  background: linear-gradient(90deg, #FFCE00, #FF9D00);
+  color: #fff;
+  height: 45px;
+  border-radius: 35px;
+  width: 180px;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(102, 102, 102, 0.2);
+  opacity: 1;
+  transition: 0.2s opacity;
+  position: absolute;
+  bottom: 25%;
+  right: 0;
+}
+
+.index__system--img .index__system--link:hover {
+  opacity: 0.7;
+}
+
+.index__system--img .index__system--link::after {
+  content: "";
+  display: block;
+  background: url("../img/btn_triangle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+}
+
+/* -------------------------------
+▲index__systemここまで▲
+------------------------------- */
+/* -------------------------------
+▼index__listここから▼
+------------------------------- */
+.index__list {
+  border: #0B799A 10px solid;
+  width: 80vw;
+  max-width: 1000px;
+  border-radius: 50px;
+  margin: 50px auto 80px;
+  padding: 60px 40px;
+}
+
+.index__list h2 {
+  text-align: center;
+}
+
+.index__list .index__list--icon {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 10% 30px;
+}
+
+.index__list .index__list--icon div {
+  width: 25%;
+}
+
+.index__list .index__list--icon div img {
+  width: 100%;
+}
+
+.index__list .index__list--icon p {
+  text-align: center;
+  color: #b8b8b8;
+  margin-top: 15px;
+  font-size: 1.3rem;
+}
+
+.index__list .index__list--txt {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.index__list .index__list--flow {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.index__list .index__list--flow > div {
+  width: 40%;
+}
+
+.index__list .index__list--flow > div:first-child {
+  position: relative;
+}
+
+.index__list .index__list--flow > div:first-child::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 60px;
+  background: url("../img/category_arrow.svg") no-repeat;
+  background-size: contain;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  right: -100px;
+  position: absolute;
+}
+
+.index__list .index__list--flow .category__flow--headline {
+  font-size: 1.5rem;
+  color: #0B799A;
+  font-weight: bold;
+  text-align: center;
+}
+
+.index__list .index__list--flow .category__flow--img {
+  width: 100%;
+  height: 170px;
+  margin: 20px 0;
+}
+
+.index__list .index__list--flow .category__flow--img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.index__list .index__list--flow .category__flow--description {
+  font-size: 1.3rem;
+  color: #a3a3a3;
+  text-align: center;
+}
+
+/* -------------------------------
+▲index__listここまで▲
+------------------------------- */
+/* -------------------------------
+▼index__tipsここから▼
+------------------------------- */
+.index__tips {
+  background: url("../img/tips_bg.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  overflow: hidden;
+  padding: 220px 0;
+}
+
+.index__tips .index__tips--bg {
+  width: 100%;
+  height: 80%;
+  position: absolute;
+  z-index: 2;
+  top: 10%;
+  left: 0;
+  overflow: hidden;
+}
+
+.index__tips .index__tips--bg::before {
+  content: "";
+  display: block;
+  background: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  width: calc(100% + 10px);
+  height: calc(100% + 10px);
+  top: 0;
+  left: 0;
+}
+
+.index__tips .index__tips--headline {
+  background-color: #FF8B8B;
+  height: 60px;
+  width: 300px;
+  border-radius: 30px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  transform: translateY(-30px);
+  z-index: 3;
+}
+
+.index__tips .index__tips--headline::after {
+  content: "";
+  display: block;
+  background: url("../img/tips_triangle.svg") no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: -19px;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+}
+
+.index__tips .index__tips--wrap {
+  width: 80vw;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+}
+
+.index__tips .index__tips--ttl {
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.index__tips .index__tips--ttl::after {
+  content: "";
+  display: block;
+  height: 10px;
+  width: 15%;
+  background-color: #0B799A;
+  margin: 30px auto 50px;
+}
+
+.index__tips .index__tips--ttl + p {
+  text-align: center;
+  font-size: 1.6rem;
+  margin: 0 0 20px;
+}
+
+table {
+  font-weight: bold;
+  -moz-text-align-last: center;
+       text-align-last: center;
+  border-spacing: 2px 5px;
+}
+
+table + p {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+tr {
+  height: 90px;
+}
+
+tr:first-child {
+  height: 70px;
+  font-size: 1.3rem;
+}
+
+tr:first-child td:nth-child(2) {
+  background: #fffae6;
+}
+
+tr:first-child td:nth-child(2) span {
+  background: #fff5cc;
+}
+
+tr:first-child td:nth-child(3) {
+  background: #ffeb99;
+}
+
+tr:first-child td:nth-child(3) span {
+  background: #ffe266;
+}
+
+tr:first-child td:nth-child(4) {
+  background: #ffdd4d;
+}
+
+tr:first-child td:nth-child(4) span {
+  background: #FFCE00;
+}
+
+tr:first-child td:nth-child(5) {
+  background: #ffc466;
+}
+
+tr:first-child td:nth-child(5) span {
+  background: #ffb133;
+}
+
+tr:first-child td:nth-child(6) {
+  font-size: 1.3rem;
+  background: #ffbebe;
+}
+
+tr:first-child td:nth-child(6) span {
+  background: #FF8B8B;
+}
+
+tr:first-child td span {
+  background: #fefaea;
+  font-size: 1.1rem;
+  font-weight: normal;
+  display: inline-block;
+  padding: 3px 7px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+th {
+  width: 220px;
+  background: #fffef8;
+  position: relative;
+}
+
+th::after {
+  content: "";
+  display: block;
+  background: url("../img/table_triangle.svg") no-repeat;
+  background-size: contain;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -20px;
+  margin: auto 0;
+}
+
+td {
+  width: 200px;
+}
+
+td:nth-child(2) {
+  background: #fff5cc;
+}
+
+td:nth-child(3) {
+  background: #ffe266;
+}
+
+td:nth-child(4) {
+  background: #FFCE00;
+}
+
+td:nth-child(5) {
+  background: #ffb133;
+}
+
+td:nth-child(6) {
+  background: #FF8B8B;
+  font-size: 1.7rem;
+}
+
+/* -------------------------------
+▲index__tipsここまで▲
+------------------------------- */
+/* -------------------------------
+▼index__faqここから▼
+------------------------------- */
+.index__faq {
+  background: url("../img/figure_balloon_3.png") no-repeat;
+  background-size: 300px auto;
+  background-position: right 10% top 10%;
+  padding: 80px 0 0;
+  margin: 0 0 50px;
+}
+
+.index__faq > div {
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+.index__faq .index__ttl::before {
+  content: "Frequently Asked Questions";
+  font-family: adobe-handwriting-ernie, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 8rem;
+  color: #a0a0a0c5;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  z-index: -10;
+}
+
+.index__faq .index__ttl span {
+  left: 300px;
+}
+
+.index__faq .index__faq--question {
+  font-weight: bold;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+
+.index__faq .index__faq--question::before, .index__faq .index__faq--question::after {
+  content: "";
+  display: block;
+  background: #707070;
+  width: 10px;
+  height: 4px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 0.2s top, 0.2s bottom;
+}
+
+.index__faq .index__faq--question::before {
+  transform: rotateZ(45deg);
+  right: -15px;
+}
+
+.index__faq .index__faq--question::after {
+  transform: rotateZ(135deg);
+  right: -20px;
+}
+
+.index__faq .index__faq--answer {
+  margin-bottom: 50px;
+  line-height: 2.5rem;
+  padding-right: 50px;
+}
+
+.index__faq .index__faq--answer a {
+  text-decoration: underline;
+  transition: 0.2s opacity;
+  opacity: 1;
+}
+
+.index__faq .index__faq--answer a:hover {
+  opacity: 0.6;
+}
+
+.index__faq .index__faq--link {
+  margin-top: 180px;
+}
+
+.index__faq .index__faq--link a:nth-child(1) {
+  background: linear-gradient(90deg, #FFCE00, #FF9D00);
+  color: #fff;
+  height: 45px;
+  border-radius: 35px;
+  width: 180px;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(102, 102, 102, 0.2);
+  opacity: 1;
+  transition: 0.2s opacity;
+  margin-bottom: 10px;
+}
+
+.index__faq .index__faq--link a:nth-child(1):hover {
+  opacity: 0.7;
+}
+
+.index__faq .index__faq--link a:nth-child(1)::after {
+  content: "";
+  display: block;
+  background: url("../img/btn_triangle.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+}
+
+.index__faq .index__faq--link a:nth-child(1)::after {
+  margin-left: calc(1.4rem + 20px);
+}
+
+.index__faq .index__faq--link a:nth-child(2) {
+  border: 5px #FFCE00 solid;
+  background: linear-gradient(90deg, #FFCE00, #FF9D00);
+  color: #FFCE00;
+  height: 45px;
+  border-radius: 35px;
+  width: 180px;
+  font-size: 1.4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  box-shadow: 0 0 20px rgba(102, 102, 102, 0.2);
+  opacity: 1;
+  transition: 0.2s opacity;
+  background: transparent;
+}
+
+.index__faq .index__faq--link a:nth-child(2):hover {
+  opacity: 0.7;
+}
+
+.index__faq .index__faq--link a:nth-child(2)::after {
+  content: "";
+  display: block;
+  background: url("../img/btn_triangle_2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 15px;
+  height: 15px;
+  margin-left: 20px;
+}
+
+/* -------------------------------
+▲index__faqここまで▲
+------------------------------- */
+/* -------------------------------
+▼index__footerここから▼
+------------------------------- */
+footer {
+  background: url("../img/foot_bg.svg") no-repeat;
+  background-position: right 0 bottom 0;
+  background-size: 60vw auto;
+}
+
+.index__footer {
+  display: flex;
+  width: 90vw;
+  max-width: 1200px;
+  padding: 100px 0 80px;
+  margin: 0 auto;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.index__footer h2 {
+  color: #FFCE00;
+}
+
+.index__footer .index__footer--app {
+  margin: 30px 0;
+  display: block;
+  width: 480px;
+}
+
+.index__footer .index__footer--app img {
+  width: 100%;
+}
+
+.index__footer .index__footer--link {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.index__footer .index__footer--link a {
+  margin-bottom: 10px;
+}
+
+.index__footer .index__footer--link a::after {
+  margin: 0;
+}
+
+.index__footer .index__footer--link a:hover {
+  text-decoration: underline;
+}
+
+.index__footer--shere {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: "Comfortaa", sans-serif;
+}
+
+.index__footer--shere ul {
+  display: flex;
+  margin: 25px 0;
+}
+
+.index__footer--shere ul li {
+  margin-right: 15px;
+}
+
+.index__footer--shere ul li:last-child {
+  margin: 0;
+}
+
+.index__footer--shere ul li img {
+  width: 40px;
+}
+
+small {
+  font-family: "Comfortaa", sans-serif;
+}
+
+/* -------------------------------
+▲index__footerここまで▲
+------------------------------- */
+/* -------------------------------
+▼index__scrollTopここから▼
+------------------------------- */
+.index__scrollTop {
+  background: url("../img/web_top_br.png") no-repeat;
+  background-size: contain;
+  position: fixed;
+  bottom: 40px;
+  right: 4vw;
+  width: 110px;
+  z-index: 5;
+}
+
+.index__scrollTop::before, .index__scrollTop::after {
+  content: "";
+  display: block;
+  background: #FFCE00;
+  width: 20px;
+  height: 5px;
+  border-radius: 5px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  transition: 0.2s top, 0.2s bottom;
+}
+
+.index__scrollTop::before {
+  transform: rotateZ(45deg);
+  right: -15px;
+}
+
+.index__scrollTop::after {
+  transform: rotateZ(135deg);
+  right: -20px;
+}
+
+.index__scrollTop::before {
+  left: 11px;
+  right: 0;
+}
+
+.index__scrollTop::after {
+  left: 0;
+  right: 11px;
+}
+
+.index__scrollTop img {
+  width: 100%;
+}
+
+.index__scrollTop:hover::before, .index__scrollTop:hover::after {
+  top: -7px;
+  bottom: 7px;
+}
+
+/* -------------------------------
+▲index__scrollTopここまで▲
+------------------------------- */
+.test__description {
+  text-align: center;
+  margin: 20px 0 40px;
+}
